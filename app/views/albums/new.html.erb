@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <%= stylesheet_link_tag 'new_album', 'menu' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <%= render 'shared/menu' %>
+  <div id="content" class="container-fluid">
+     <div class="row">
+         <div class="left col-2">
+             <div class="menu-left d-flex flex-column justify-content-center">
+                 <a href="#">Feeds</a>
+                 <a href="#">Discover</a>
+             </div>
+         </div>
+         <div class="middle col-8">
+            <div class="head d-flex justify-content-between">
+                <div class="title">New Album</div>
+                <div class="button">
+                    <a href="#" class="btn">Back</a>
+                </div>
+            </div>
+            <hr>
+              <% if flash[:success] %>
+                    <div class="alert alert-success">
+                        <%= flash[:success] %>
+                    </div>
+                <% end %>
+                <% if flash[:error] %>
+                     <div class="alert alert-danger">
+                        <%= flash[:error] %>
+                    </div>
+                <% end %>
+            <div class="body d-flex justify-content-around">
+                <div class="body-content">
+                    <%= form_for @album do |f| %>
+                        <div>
+                            <%= f.label :title, "Title", class: "title" %>
+                            <%= f.text_field :title, class: "form-control" %>
+                        </div>
+                        
+                        <div style="margin-top: 31px;">
+                            <%= f.label :mode, "Sharing mode", class: "title" %><br>
+                            <%= f.select :mode, [["Public", "0"], ["Private", "1"]], class: "form-control" %>
+                        </div>
+                        
+                        <div class="body-img" style="margin-top: 31px;">
+                            <%= f.file_field :image %>
+                            <i class="fa fa-plus"></i>
+                            <img src="" alt="">
+                        </div>
+
+                        <div class="body-content">
+                            <%= f.label :description, "Description" %>
+                            <%= f.text_area :description, class: "form-control" %>
+                        </div>
+
+                        <div class="body-button d-flex" style="margin-top: 51px;">
+                            <%= f.submit "Save", class: "btn"%>
+                        </div>
+                    <% end %>
+
+            </div>
+         </div>
+         <div class="right col-2"></div>
+     </div>
+  </div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script> 
+    <%= javascript_pack_tag 'new_album' %>
+</html>

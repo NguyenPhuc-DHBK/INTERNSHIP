@@ -4,6 +4,6 @@ class Album < ApplicationRecord
     validates :title, :description, :mode, presence: true
     validates :title, length: { maximum: 140 }
     validates :description, length: { maximum: 300 }
-    enum mode: [:Public, :Private] 
+    enum mode: [:public_mode, :private_mode] 
 
 end

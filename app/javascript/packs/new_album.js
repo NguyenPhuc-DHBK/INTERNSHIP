@@ -3,8 +3,8 @@ $(document).ready(function(event) {
         $(this).css("cursor", "pointer")
     })
     $('div.body-img i').click(function() {
-         $('#fileid').click();
-         $('#fileid').change(function(event) {
+         $('#album_image').click();
+         $('#album_image').change(function(event) {
              var path_img = URL.createObjectURL(event.target.files[0]);
              $('div.body-img img').attr("src", path_img).css("display", "block");
              $('div.body-img').css("border", "none");

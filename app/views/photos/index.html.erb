@@ -23,19 +23,20 @@
              </div>
              <div class="main-content">
                  <div class="row" style="margin-bottom: 15px;">
+                    <% i = 0 %>
                     <% @photos.each do |photo| %>
                      <div class="col-lg-6 col-md-12 col-sm-12" style="margin-bottom: 20px;">
                          <div class="row">
                              <div class="col-6" style="padding-right: 0px;">
-                                 <div class="picture" data-toggle="modal" data-target=".myModal">
+                                 <div class="picture" data-toggle="modal" data-target="#myModal-<%= i %>">
                                     <a href="#"><img src="<%= photo.image.url %>" alt="Anh chan dung" width="100%" height="100%"></a>
                                  </div>
                              </div>
                              <div class="col-6" style="padding-left: 0px;">
                                  <div class="info" style="padding: 10px">
                                      <div class="user-name d-flex">
-                                         <div class="user-icon d-flex justify-content-center"><%= current_user.firstname[0] %><%= current_user.lastname[0] %></div>
-                                         <div class="name"><%= current_user.firstname %> <%= current_user.lastname %></div>
+                                         <div class="user-icon d-flex justify-content-center"><%= photo.user.firstname[0] %><%= photo.user.lastname[0] %></div>
+                                         <div class="name"><%= photo.user.firstname %> <%= photo.user.lastname %></div>
                                      </div>
                                      <div class="title"><%= photo.title %></div>
                                      <div class="para"><%= photo.description %></div>
@@ -49,7 +50,7 @@
                          </div>
 
                          <!-- The Modal -->
-                         <div class="modal fade myModal">
+                         <div class="modal fade" id="myModal-<%= i %>">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -66,6 +67,7 @@
                             </div>
                          </div>
                      </div>
+                     <% i = i + 1 %>
                     <% end %>
              </div>
              <div class="spiner d-flex justify-content-lg-center">

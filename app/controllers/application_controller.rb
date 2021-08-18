@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     layout false
-    before_action :authenticate_user!, only: [:new]
+    before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
     # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
     protect_from_forgery with: :exception
