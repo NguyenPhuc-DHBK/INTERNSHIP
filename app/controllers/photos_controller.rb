@@ -12,7 +12,7 @@ class PhotosController < ApplicationController
     def create
         title = params[:photo][:title]
         description = params[:photo][:description]
-        image = params[:photo][:filename]
+        image = params[:photo][:image]
         mode = params[:photo][:mode].to_i
         @photo = @user.photos.new(title: title, description: description, image: image, mode: mode)
         if @photo.save

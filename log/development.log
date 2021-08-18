@@ -12322,3 +12322,1579 @@ Processing by PhotosController#create as HTML
 Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 8112)
 
 
+Started GET "/" for 127.0.0.1 at 2021-08-18 09:35:59 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  Rendered photos/index.html.erb (Duration: 1.9ms | Allocations: 346)
+Completed 200 OK in 16ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 7536)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 09:36:07 +0700
+Processing by PhotosController#new as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 338)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-08-18 09:36:07 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.7ms | Allocations: 478)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/sessions/new.html.erb (Duration: 30.0ms | Allocations: 15785)
+Completed 200 OK in 42ms (Views: 31.5ms | ActiveRecord: 1.2ms | Allocations: 22793)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-08-18 09:36:12 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"hoangphuc3333333@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "hoangphuc3333333@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/photos/new
+Completed 302 Found in 221ms (ActiveRecord: 0.2ms | Allocations: 5966)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 09:36:12 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 1.2ms | Allocations: 169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 9.5ms | Allocations: 4602)
+Completed 200 OK in 32ms (Views: 11.2ms | ActiveRecord: 1.1ms | Allocations: 14521)
+
+
+Started POST "/photos" for 127.0.0.1 at 2021-08-18 09:36:34 +0700
+Processing by PhotosController#create as HTML
+  Parameters: {"photo"=>{"title"=>"Anh 1", "mode"=>"0", "filename"=>"Nên-tập-trung-vào-ánh-mắt-mẫu.jpg", "description"=>"ssfsdfds"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 5.8ms | Allocations: 3972)
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 0.2ms | Allocations: 7492)
+
+
+Started POST "/photos" for 127.0.0.1 at 2021-08-18 09:37:34 +0700
+Processing by PhotosController#create as HTML
+  Parameters: {"photo"=>{"title"=>"Anh 1", "mode"=>"0", "filename"=>"Nên-tập-trung-vào-ánh-mắt-mẫu.jpg", "description"=>"ssfsdfds"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 401)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 5.6ms | Allocations: 4830)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 8203)
+
+
+Started POST "/photos" for 127.0.0.1 at 2021-08-18 09:37:41 +0700
+Processing by PhotosController#create as HTML
+  Parameters: {"photo"=>{"title"=>"Anh 1", "mode"=>"0", "filename"=>"l60Hf.png", "description"=>"dsdfs"}, "commit"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 6.3ms | Allocations: 3972)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 7093)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Started POST "/photos" for 127.0.0.1 at 2021-08-18 09:38:41 +0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhotosController#create as HTML
+  Parameters: {"photo"=>{"title"=>"Anh 1", "mode"=>"0", "filename"=>"l60Hf.png", "description"=>"dsdfs"}, "commit"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mPhoto Create (0.7ms)[0m  [1m[32mINSERT INTO "photos" ("title", "description", "image", "mode", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Anh 1"], ["description", "dsdfs"], ["image", "l60Hf.png"], ["mode", 0], ["user_id", 1], ["created_at", "2021-08-18 02:38:41.242177"], ["updated_at", "2021-08-18 02:38:41.242177"]]
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 37ms (ActiveRecord: 7.1ms | Allocations: 24980)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 09:38:41 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  Rendered photos/index.html.erb (Duration: 0.4ms | Allocations: 335)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 2440)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 09:38:45 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 411)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 13.6ms | Allocations: 13544)
+Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 16236)
+
+
+Started POST "/photos" for 127.0.0.1 at 2021-08-18 09:38:54 +0700
+Processing by PhotosController#create as HTML
+  Parameters: {"photo"=>{"title"=>"Anh 1", "mode"=>"0", "filename"=>"l60Hf.png", "description"=>"dfsdfsf"}, "commit"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("title", "description", "image", "mode", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Anh 1"], ["description", "dfsdfsf"], ["image", "l60Hf.png"], ["mode", 0], ["user_id", 1], ["created_at", "2021-08-18 02:38:54.068959"], ["updated_at", "2021-08-18 02:38:54.068959"]]
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 16ms (ActiveRecord: 4.1ms | Allocations: 6093)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 09:38:54 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  Rendered photos/index.html.erb (Duration: 0.1ms | Allocations: 38)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 492)
+
+
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 09:40:37 +0700
+Processing by PhotosController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/photos_controller.rb:5:in `index'
+  Rendering photos/index.html.erb
+  Rendered photos/index.html.erb (Duration: 0.2ms | Allocations: 133)
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 5423)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 09:40:40 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 384)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 4.4ms | Allocations: 4769)
+Completed 200 OK in 27ms (Views: 4.7ms | ActiveRecord: 1.4ms | Allocations: 17143)
+
+
+Started POST "/photos" for 127.0.0.1 at 2021-08-18 09:40:50 +0700
+Processing by PhotosController#create as HTML
+  Parameters: {"photo"=>{"title"=>"Anh 1", "mode"=>"0", "filename"=>"l60Hf.png", "description"=>"sadasdadas"}, "commit"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 2811)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `filename`):
+  
+app/controllers/photos_controller.rb:18:in `create'
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 09:41:36 +0700
+Processing by PhotosController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 409)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 7.8ms | Allocations: 4893)
+Completed 200 OK in 26ms (Views: 8.6ms | ActiveRecord: 1.2ms | Allocations: 22148)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 09:41:42 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 6.0ms | Allocations: 4048)
+Completed 200 OK in 15ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 6515)
+
+
+Started POST "/photos" for 127.0.0.1 at 2021-08-18 09:41:51 +0700
+Processing by PhotosController#create as HTML
+  Parameters: {"photo"=>{"title"=>"Anh 1", "mode"=>"0", "image"=>"tw.jpeg", "description"=>"sadsasad"}, "commit"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 3.3ms | Allocations: 3972)
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 7059)
+
+
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 09:54:41 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 1.2ms | Allocations: 497)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 27.4ms | Allocations: 15353)
+Completed 200 OK in 66ms (Views: 28.7ms | ActiveRecord: 1.9ms | Allocations: 38033)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 09:59:43 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 13.5ms | Allocations: 7964)
+Completed 200 OK in 22ms (Views: 14.8ms | ActiveRecord: 0.3ms | Allocations: 10990)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:01:01 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.9ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 8.9ms | Allocations: 5725)
+Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 8715)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:02:22 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.7ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 17.9ms | Allocations: 7671)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.1ms | Allocations: 10599)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:03:13 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.9ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 10.3ms | Allocations: 5733)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 0.1ms | Allocations: 8685)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:06:27 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 1.9ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 23.1ms | Allocations: 10857)
+Completed 200 OK in 31ms (Views: 24.4ms | ActiveRecord: 0.2ms | Allocations: 13809)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:07:34 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 102)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 0045f843909b93248a80
+Version: webpack 4.46.0
+Time: 638ms
+Built at: 08/18/2021 10:07:37 AM
+                                     Asset      Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js   125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map   139 KiB  application  [emitted] [dev]        application
+         js/jquery-02c73c8c49ca1d5bd55d.js  37.1 KiB       jquery  [emitted] [immutable]  jquery
+     js/jquery-02c73c8c49ca1d5bd55d.js.map  31.4 KiB       jquery  [emitted] [dev]        jquery
+          js/login-d3fa9699b915b3a3be4f.js  4.18 KiB        login  [emitted] [immutable]  login
+      js/login-d3fa9699b915b3a3be4f.js.map  4.06 KiB        login  [emitted] [dev]        login
+      js/new_album-c58baf3f939479f413aa.js   4.9 KiB    new_album  [emitted] [immutable]  new_album
+  js/new_album-c58baf3f939479f413aa.js.map  5.06 KiB    new_album  [emitted] [dev]        new_album
+      js/new_photo-efcc37ca95d18a02f4ca.js   4.9 KiB    new_photo  [emitted] [immutable]  new_photo
+  js/new_photo-efcc37ca95d18a02f4ca.js.map  4.95 KiB    new_photo  [emitted] [dev]        new_photo
+          js/photo-bf0a0720f307fe9b7bf3.js  3.89 KiB        photo  [emitted] [immutable]  photo
+      js/photo-bf0a0720f307fe9b7bf3.js.map  3.61 KiB        photo  [emitted] [dev]        photo
+         js/signup-0c894dc2171a06d1125e.js  5.04 KiB       signup  [emitted] [immutable]  signup
+     js/signup-0c894dc2171a06d1125e.js.map  5.31 KiB       signup  [emitted] [dev]        signup
+                             manifest.json  2.16 KiB               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+Entrypoint jquery = js/jquery-02c73c8c49ca1d5bd55d.js js/jquery-02c73c8c49ca1d5bd55d.js.map
+Entrypoint login = js/login-d3fa9699b915b3a3be4f.js js/login-d3fa9699b915b3a3be4f.js.map
+Entrypoint new_album = js/new_album-c58baf3f939479f413aa.js js/new_album-c58baf3f939479f413aa.js.map
+Entrypoint new_photo = js/new_photo-efcc37ca95d18a02f4ca.js js/new_photo-efcc37ca95d18a02f4ca.js.map
+Entrypoint photo = js/photo-bf0a0720f307fe9b7bf3.js js/photo-bf0a0720f307fe9b7bf3.js.map
+Entrypoint signup = js/signup-0c894dc2171a06d1125e.js js/signup-0c894dc2171a06d1125e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/jquery.validate.min.js] 32.7 KiB {jquery} [built]
+[./app/javascript/packs/login.js] 323 bytes {login} [built]
+[./app/javascript/packs/new_album.js] 1.01 KiB {new_album} [built]
+[./app/javascript/packs/new_photo.js] 1.02 KiB {new_photo} [built]
+[./app/javascript/packs/photo.js] 34 bytes {photo} [built]
+[./app/javascript/packs/signup.js] 1.17 KiB {signup} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+ERROR in ./app/javascript/packs/jquery.validate.min.js
+Module not found: Error: Can't resolve 'jquery' in '/home/phuc_nguyen/Desktop/internship/app/javascript/packs'
+ @ ./app/javascript/packs/jquery.validate.min.js 5:46-67
+
+
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+  Rendered photos/new.html.erb (Duration: 2564.5ms | Allocations: 5866)
+Completed 200 OK in 2569ms (Views: 2564.8ms | ActiveRecord: 0.2ms | Allocations: 8339)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:08:02 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.7ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 17.8ms | Allocations: 8898)
+Completed 200 OK in 30ms (Views: 20.0ms | ActiveRecord: 0.3ms | Allocations: 11594)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:08:26 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 14.4ms | Allocations: 8076)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.2ms | Allocations: 10545)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:09:27 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 102)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 678dcb8f0eddf873fc54
+Version: webpack 4.46.0
+Time: 501ms
+Built at: 08/18/2021 10:09:29 AM
+                                     Asset      Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js   125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map   139 KiB  application  [emitted] [dev]        application
+         js/jquery-02c73c8c49ca1d5bd55d.js  37.1 KiB       jquery  [emitted] [immutable]  jquery
+     js/jquery-02c73c8c49ca1d5bd55d.js.map  31.4 KiB       jquery  [emitted] [dev]        jquery
+          js/login-d3fa9699b915b3a3be4f.js  4.18 KiB        login  [emitted] [immutable]  login
+      js/login-d3fa9699b915b3a3be4f.js.map  4.06 KiB        login  [emitted] [dev]        login
+      js/new_album-c58baf3f939479f413aa.js   4.9 KiB    new_album  [emitted] [immutable]  new_album
+  js/new_album-c58baf3f939479f413aa.js.map  5.06 KiB    new_album  [emitted] [dev]        new_album
+      js/new_photo-b69ac62ced984967f610.js  4.91 KiB    new_photo  [emitted] [immutable]  new_photo
+  js/new_photo-b69ac62ced984967f610.js.map  4.96 KiB    new_photo  [emitted] [dev]        new_photo
+          js/photo-bf0a0720f307fe9b7bf3.js  3.89 KiB        photo  [emitted] [immutable]  photo
+      js/photo-bf0a0720f307fe9b7bf3.js.map  3.61 KiB        photo  [emitted] [dev]        photo
+         js/signup-0c894dc2171a06d1125e.js  5.04 KiB       signup  [emitted] [immutable]  signup
+     js/signup-0c894dc2171a06d1125e.js.map  5.31 KiB       signup  [emitted] [dev]        signup
+                             manifest.json  2.16 KiB               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+Entrypoint jquery = js/jquery-02c73c8c49ca1d5bd55d.js js/jquery-02c73c8c49ca1d5bd55d.js.map
+Entrypoint login = js/login-d3fa9699b915b3a3be4f.js js/login-d3fa9699b915b3a3be4f.js.map
+Entrypoint new_album = js/new_album-c58baf3f939479f413aa.js js/new_album-c58baf3f939479f413aa.js.map
+Entrypoint new_photo = js/new_photo-b69ac62ced984967f610.js js/new_photo-b69ac62ced984967f610.js.map
+Entrypoint photo = js/photo-bf0a0720f307fe9b7bf3.js js/photo-bf0a0720f307fe9b7bf3.js.map
+Entrypoint signup = js/signup-0c894dc2171a06d1125e.js js/signup-0c894dc2171a06d1125e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/jquery.validate.min.js] 32.7 KiB {jquery} [built]
+[./app/javascript/packs/login.js] 323 bytes {login} [built]
+[./app/javascript/packs/new_album.js] 1.01 KiB {new_album} [built]
+[./app/javascript/packs/new_photo.js] 1.02 KiB {new_photo} [built]
+[./app/javascript/packs/photo.js] 34 bytes {photo} [built]
+[./app/javascript/packs/signup.js] 1.17 KiB {signup} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+ERROR in ./app/javascript/packs/jquery.validate.min.js
+Module not found: Error: Can't resolve 'jquery' in '/home/phuc_nguyen/Desktop/internship/app/javascript/packs'
+ @ ./app/javascript/packs/jquery.validate.min.js 5:46-67
+
+
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+  Rendered photos/new.html.erb (Duration: 1901.7ms | Allocations: 5783)
+Completed 200 OK in 1906ms (Views: 1902.3ms | ActiveRecord: 0.1ms | Allocations: 8019)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:11:16 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 1.2ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 9.3ms | Allocations: 5761)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 0.2ms | Allocations: 8456)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:12:59 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.6ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 8.6ms | Allocations: 5731)
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 8659)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:13:49 +0700
+Processing by PhotosController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.6ms | Allocations: 406)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 8.5ms | Allocations: 5772)
+Completed 200 OK in 33ms (Views: 9.6ms | ActiveRecord: 1.4ms | Allocations: 22982)
+
+
+Started POST "/photos" for 127.0.0.1 at 2021-08-18 10:14:01 +0700
+Processing by PhotosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "photo"=>{"title"=>"Anh 1", "mode"=>"0", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055c2f744d5a8 @tempfile=#<Tempfile:/tmp/RackMultipart20210818-16390-s5qn87.jpeg>, @original_filename="tw.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"tw.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Day la anh 1"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mPhoto Create (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("title", "description", "image", "mode", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Anh 1"], ["description", "Day la anh 1"], ["image", "tw.jpeg"], ["mode", 0], ["user_id", 1], ["created_at", "2021-08-18 03:14:01.975602"], ["updated_at", "2021-08-18 03:14:01.975602"]]
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 30ms (ActiveRecord: 7.3ms | Allocations: 9293)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:14:02 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  Rendered photos/index.html.erb (Duration: 0.5ms | Allocations: 113)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 778)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPhoto Destroy (0.4ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:14:56 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  Rendered photos/index.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 490)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:15:06 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 108)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 6.8ms | Allocations: 4736)
+Completed 200 OK in 15ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 6972)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:15:29 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.6ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 6.5ms | Allocations: 5732)
+Completed 200 OK in 18ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 8427)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:16:51 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.9ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 7.2ms | Allocations: 5738)
+Completed 200 OK in 17ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 8666)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:17:32 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 1.0ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 10.8ms | Allocations: 5762)
+Completed 200 OK in 18ms (Views: 11.7ms | ActiveRecord: 0.2ms | Allocations: 8690)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:18:11 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered photos/new.html.erb (Duration: 6.2ms | Allocations: 3565)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 6484)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <%= stylesheet_link_tag 'new_photo', 'menu' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <%= render 'shared/menu' %>
+  <div id="content" class="container-fluid">
+     <div class="row">
+         <div class="left col-2">
+             <div class="menu-left d-flex flex-column justify-content-center">
+                 <a href="#">Feeds</a>
+                 <a href="#">Discover</a>
+             </div>
+         </div>
+         <div class="middle col-8">
+            <div class="head d-flex justify-content-between">
+                <div class="title">New Photo</div>
+                <div class="button">
+                    <a href="#" class="btn">Back</a>
+                </div>
+            </div>
+            <hr>
+            <div class="body d-flex justify-content-around">
+                <div class="body-content">
+             
+
+                    <%= form_for @photo do |f| %>
+                        <div>
+                            <%= f.label :title, "Title", class: "title" %>
+                            <%= f.text_field :title, class: "form-control" %>
+                        </div>
+                        
+                        <div style="margin-top: 31px;">
+                            <%= f.label :mode, "Sharing mode", class: "title" %><br>
+                            <%= f.select :mode, class: "form-cotrol", [["Public", "0"], ["Private", "1"] %>
+                        </div>
+                        
+                        <div class="body-img" style="margin-top: 31px;">
+                            <%= f.file_field :image %>
+                            <i class="fa fa-plus"></i>
+                            <img src="" alt="">
+                        </div>
+
+                        <div class="body-content">
+                            <%= f.label :description, "Description" %>
+                            <%= f.text_area :description, class: "form-control" %>
+                        </div>
+
+                        <div class="body-button d-flex" style="margin-top: 51px;">
+                            <%= f.submit "Save", class: "btn"%>
+                        </div>
+                    <% end %>
+
+            </div>
+         </div>
+         <div class="right col-2"></div>
+     </div>
+  </div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script> 
+    <%= javascript_pack_tag 'new_photo' %>
+</html>
+):
+1:    <!DOCTYPE html>
+2:    <html lang="en">
+3:    <head>
+4:        <meta charset="UTF-8">
+5:        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+6:        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+7:        <title>Document</title>
+8:        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+9:        <%= stylesheet_link_tag 'new_photo', 'menu' %>
+10:        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+11:    </head>
+12:    <body>
+13:      <%= render 'shared/menu' %>
+14:      <div id="content" class="container-fluid">
+15:         <div class="row">
+16:             <div class="left col-2">
+17:                 <div class="menu-left d-flex flex-column justify-content-center">
+18:                     <a href="#">Feeds</a>
+19:                     <a href="#">Discover</a>
+20:                 </div>
+21:             </div>
+22:             <div class="middle col-8">
+23:                <div class="head d-flex justify-content-between">
+24:                    <div class="title">New Photo</div>
+25:                    <div class="button">
+26:                        <a href="#" class="btn">Back</a>
+27:                    </div>
+28:                </div>
+29:                <hr>
+30:                <div class="body d-flex justify-content-around">
+31:                    <div class="body-content">
+32:                 
+33:    
+34:                        <%= form_for @photo do |f| %>
+35:                            <div>
+36:                                <%= f.label :title, "Title", class: "title" %>
+37:                                <%= f.text_field :title, class: "form-control" %>
+38:                            </div>
+39:                            
+40:                            <div style="margin-top: 31px;">
+41:                                <%= f.label :mode, "Sharing mode", class: "title" %><br>
+42:                                <%= f.select :mode, class: "form-cotrol", [["Public", "0"], ["Private", "1"] %>
+43:                            </div>
+44:                            
+45:                            <div class="body-img" style="margin-top: 31px;">
+46:                                <%= f.file_field :image %>
+47:                                <i class="fa fa-plus"></i>
+48:                                <img src="" alt="">
+49:                            </div>
+50:    
+51:                            <div class="body-content">
+52:                                <%= f.label :description, "Description" %>
+53:                                <%= f.text_area :description, class: "form-control" %>
+54:                            </div>
+55:    
+56:                            <div class="body-button d-flex" style="margin-top: 51px;">
+57:                                <%= f.submit "Save", class: "btn"%>
+58:                            </div>
+59:                        <% end %>
+60:    
+61:                </div>
+62:             </div>
+63:             <div class="right col-2"></div>
+64:         </div>
+65:      </div>
+66:    </body>
+67:        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+68:        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+69:        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+70:        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script> 
+71:        <%= javascript_pack_tag 'new_photo' %>
+72:    </html>
+  
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:18:20 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered photos/new.html.erb (Duration: 1.3ms | Allocations: 1409)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms | Allocations: 4317)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <%= stylesheet_link_tag 'new_photo', 'menu' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <%= render 'shared/menu' %>
+  <div id="content" class="container-fluid">
+     <div class="row">
+         <div class="left col-2">
+             <div class="menu-left d-flex flex-column justify-content-center">
+                 <a href="#">Feeds</a>
+                 <a href="#">Discover</a>
+             </div>
+         </div>
+         <div class="middle col-8">
+            <div class="head d-flex justify-content-between">
+                <div class="title">New Photo</div>
+                <div class="button">
+                    <a href="#" class="btn">Back</a>
+                </div>
+            </div>
+            <hr>
+            <div class="body d-flex justify-content-around">
+                <div class="body-content">
+             
+
+                    <%= form_for @photo do |f| %>
+                        <div>
+                            <%= f.label :title, "Title", class: "title" %>
+                            <%= f.text_field :title, class: "form-control" %>
+                        </div>
+                        
+                        <div style="margin-top: 31px;">
+                            <%= f.label :mode, "Sharing mode", class: "title" %><br>
+                            <%= f.select :mode, [["Public", "0"], ["Private", "1"] %>
+                        </div>
+                        
+                        <div class="body-img" style="margin-top: 31px;">
+                            <%= f.file_field :image %>
+                            <i class="fa fa-plus"></i>
+                            <img src="" alt="">
+                        </div>
+
+                        <div class="body-content">
+                            <%= f.label :description, "Description" %>
+                            <%= f.text_area :description, class: "form-control" %>
+                        </div>
+
+                        <div class="body-button d-flex" style="margin-top: 51px;">
+                            <%= f.submit "Save", class: "btn"%>
+                        </div>
+                    <% end %>
+
+            </div>
+         </div>
+         <div class="right col-2"></div>
+     </div>
+  </div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script> 
+    <%= javascript_pack_tag 'new_photo' %>
+</html>
+):
+1:    <!DOCTYPE html>
+2:    <html lang="en">
+3:    <head>
+4:        <meta charset="UTF-8">
+5:        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+6:        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+7:        <title>Document</title>
+8:        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+9:        <%= stylesheet_link_tag 'new_photo', 'menu' %>
+10:        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+11:    </head>
+12:    <body>
+13:      <%= render 'shared/menu' %>
+14:      <div id="content" class="container-fluid">
+15:         <div class="row">
+16:             <div class="left col-2">
+17:                 <div class="menu-left d-flex flex-column justify-content-center">
+18:                     <a href="#">Feeds</a>
+19:                     <a href="#">Discover</a>
+20:                 </div>
+21:             </div>
+22:             <div class="middle col-8">
+23:                <div class="head d-flex justify-content-between">
+24:                    <div class="title">New Photo</div>
+25:                    <div class="button">
+26:                        <a href="#" class="btn">Back</a>
+27:                    </div>
+28:                </div>
+29:                <hr>
+30:                <div class="body d-flex justify-content-around">
+31:                    <div class="body-content">
+32:                 
+33:    
+34:                        <%= form_for @photo do |f| %>
+35:                            <div>
+36:                                <%= f.label :title, "Title", class: "title" %>
+37:                                <%= f.text_field :title, class: "form-control" %>
+38:                            </div>
+39:                            
+40:                            <div style="margin-top: 31px;">
+41:                                <%= f.label :mode, "Sharing mode", class: "title" %><br>
+42:                                <%= f.select :mode, [["Public", "0"], ["Private", "1"] %>
+43:                            </div>
+44:                            
+45:                            <div class="body-img" style="margin-top: 31px;">
+46:                                <%= f.file_field :image %>
+47:                                <i class="fa fa-plus"></i>
+48:                                <img src="" alt="">
+49:                            </div>
+50:    
+51:                            <div class="body-content">
+52:                                <%= f.label :description, "Description" %>
+53:                                <%= f.text_area :description, class: "form-control" %>
+54:                            </div>
+55:    
+56:                            <div class="body-button d-flex" style="margin-top: 51px;">
+57:                                <%= f.submit "Save", class: "btn"%>
+58:                            </div>
+59:                        <% end %>
+60:    
+61:                </div>
+62:             </div>
+63:             <div class="right col-2"></div>
+64:         </div>
+65:      </div>
+66:    </body>
+67:        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+68:        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+69:        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+70:        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script> 
+71:        <%= javascript_pack_tag 'new_photo' %>
+72:    </html>
+  
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:18:22 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered photos/new.html.erb (Duration: 0.8ms | Allocations: 1354)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms | Allocations: 3808)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <%= stylesheet_link_tag 'new_photo', 'menu' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <%= render 'shared/menu' %>
+  <div id="content" class="container-fluid">
+     <div class="row">
+         <div class="left col-2">
+             <div class="menu-left d-flex flex-column justify-content-center">
+                 <a href="#">Feeds</a>
+                 <a href="#">Discover</a>
+             </div>
+         </div>
+         <div class="middle col-8">
+            <div class="head d-flex justify-content-between">
+                <div class="title">New Photo</div>
+                <div class="button">
+                    <a href="#" class="btn">Back</a>
+                </div>
+            </div>
+            <hr>
+            <div class="body d-flex justify-content-around">
+                <div class="body-content">
+             
+
+                    <%= form_for @photo do |f| %>
+                        <div>
+                            <%= f.label :title, "Title", class: "title" %>
+                            <%= f.text_field :title, class: "form-control" %>
+                        </div>
+                        
+                        <div style="margin-top: 31px;">
+                            <%= f.label :mode, "Sharing mode", class: "title" %><br>
+                            <%= f.select :mode, [["Public", "0"], ["Private", "1"] %>
+                        </div>
+                        
+                        <div class="body-img" style="margin-top: 31px;">
+                            <%= f.file_field :image %>
+                            <i class="fa fa-plus"></i>
+                            <img src="" alt="">
+                        </div>
+
+                        <div class="body-content">
+                            <%= f.label :description, "Description" %>
+                            <%= f.text_area :description, class: "form-control" %>
+                        </div>
+
+                        <div class="body-button d-flex" style="margin-top: 51px;">
+                            <%= f.submit "Save", class: "btn"%>
+                        </div>
+                    <% end %>
+
+            </div>
+         </div>
+         <div class="right col-2"></div>
+     </div>
+  </div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script> 
+    <%= javascript_pack_tag 'new_photo' %>
+</html>
+):
+1:    <!DOCTYPE html>
+2:    <html lang="en">
+3:    <head>
+4:        <meta charset="UTF-8">
+5:        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+6:        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+7:        <title>Document</title>
+8:        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+9:        <%= stylesheet_link_tag 'new_photo', 'menu' %>
+10:        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+11:    </head>
+12:    <body>
+13:      <%= render 'shared/menu' %>
+14:      <div id="content" class="container-fluid">
+15:         <div class="row">
+16:             <div class="left col-2">
+17:                 <div class="menu-left d-flex flex-column justify-content-center">
+18:                     <a href="#">Feeds</a>
+19:                     <a href="#">Discover</a>
+20:                 </div>
+21:             </div>
+22:             <div class="middle col-8">
+23:                <div class="head d-flex justify-content-between">
+24:                    <div class="title">New Photo</div>
+25:                    <div class="button">
+26:                        <a href="#" class="btn">Back</a>
+27:                    </div>
+28:                </div>
+29:                <hr>
+30:                <div class="body d-flex justify-content-around">
+31:                    <div class="body-content">
+32:                 
+33:    
+34:                        <%= form_for @photo do |f| %>
+35:                            <div>
+36:                                <%= f.label :title, "Title", class: "title" %>
+37:                                <%= f.text_field :title, class: "form-control" %>
+38:                            </div>
+39:                            
+40:                            <div style="margin-top: 31px;">
+41:                                <%= f.label :mode, "Sharing mode", class: "title" %><br>
+42:                                <%= f.select :mode, [["Public", "0"], ["Private", "1"] %>
+43:                            </div>
+44:                            
+45:                            <div class="body-img" style="margin-top: 31px;">
+46:                                <%= f.file_field :image %>
+47:                                <i class="fa fa-plus"></i>
+48:                                <img src="" alt="">
+49:                            </div>
+50:    
+51:                            <div class="body-content">
+52:                                <%= f.label :description, "Description" %>
+53:                                <%= f.text_area :description, class: "form-control" %>
+54:                            </div>
+55:    
+56:                            <div class="body-button d-flex" style="margin-top: 51px;">
+57:                                <%= f.submit "Save", class: "btn"%>
+58:                            </div>
+59:                        <% end %>
+60:    
+61:                </div>
+62:             </div>
+63:             <div class="right col-2"></div>
+64:         </div>
+65:      </div>
+66:    </body>
+67:        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+68:        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+69:        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+70:        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script> 
+71:        <%= javascript_pack_tag 'new_photo' %>
+72:    </html>
+  
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:42: syntax error, unexpected ')', expecting ']'
+app/views/photos/new.html.erb:59: syntax error, unexpected `end', expecting ')'
+app/views/photos/new.html.erb:74: syntax error, unexpected `end', expecting ')'
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:18:49 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.7ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 11.6ms | Allocations: 5753)
+Completed 200 OK in 22ms (Views: 12.6ms | ActiveRecord: 0.3ms | Allocations: 8442)
+
+
+Started POST "/photos" for 127.0.0.1 at 2021-08-18 10:19:22 +0700
+Processing by PhotosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "photo"=>{"title"=>"Anh 1", "mode"=>"0", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fce7c01d9f0 @tempfile=#<Tempfile:/tmp/RackMultipart20210818-16390-hnr9gk.jpg>, @original_filename="4wvuq0i4ozs1q.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"4wvuq0i4ozs1q.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Day la anh 1\r\n"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("title", "description", "image", "mode", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Anh 1"], ["description", "Day la anh 1\r\n"], ["image", "4wvuq0i4ozs1q.jpg"], ["mode", 0], ["user_id", 1], ["created_at", "2021-08-18 03:19:22.332441"], ["updated_at", "2021-08-18 03:19:22.332441"]]
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 24ms (ActiveRecord: 6.1ms | Allocations: 7281)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:19:22 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  Rendered photos/index.html.erb (Duration: 0.2ms | Allocations: 96)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 693)
+
+
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPhoto Destroy (0.5ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (22.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:40:43 +0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  Rendered photos/index.html.erb (Duration: 59.8ms | Allocations: 38913)
+Completed 200 OK in 75ms (Views: 62.0ms | ActiveRecord: 0.2ms | Allocations: 46870)
+
+
+Started GET "/images/4wvuq0i4ozs1q.jpg" for 127.0.0.1 at 2021-08-18 10:40:43 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/4wvuq0i4ozs1q.jpg"):
+  
+Started GET "/photo.html" for 127.0.0.1 at 2021-08-18 10:40:55 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/photo.html"):
+  
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:40:59 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  Rendered photos/index.html.erb (Duration: 4.9ms | Allocations: 2364)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 2900)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:41:39 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 21.5ms | Allocations: 9668)
+  Rendered photos/index.html.erb (Duration: 26.2ms | Allocations: 12670)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.9ms | Allocations: 13582)
+
+
+Started GET "/images/4wvuq0i4ozs1q.jpg" for 127.0.0.1 at 2021-08-18 10:41:40 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/4wvuq0i4ozs1q.jpg"):
+  
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:42:27 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 3.0ms | Allocations: 1464)
+  Rendered photos/index.html.erb (Duration: 7.8ms | Allocations: 4504)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 5441)
+
+
+Started GET "/images/4wvuq0i4ozs1q.jpg" for 127.0.0.1 at 2021-08-18 10:42:27 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/4wvuq0i4ozs1q.jpg"):
+  
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:42:29 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 2.6ms | Allocations: 996)
+  Rendered photos/index.html.erb (Duration: 5.5ms | Allocations: 3331)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 3803)
+
+
+Started GET "/images/4wvuq0i4ozs1q.jpg" for 127.0.0.1 at 2021-08-18 10:42:29 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/4wvuq0i4ozs1q.jpg"):
+  
+Started GET "/albums" for 127.0.0.1 at 2021-08-18 10:42:30 +0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb
+  Rendered albums/index.html.erb (Duration: 0.4ms | Allocations: 133)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1071)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:42:32 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 4.4ms | Allocations: 1142)
+  Rendered photos/index.html.erb (Duration: 9.6ms | Allocations: 3595)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms | Allocations: 4138)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:44:08 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 3.6ms | Allocations: 1457)
+  Rendered photos/index.html.erb (Duration: 10.1ms | Allocations: 4364)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 5304)
+
+
+Started GET "/images/4wvuq0i4ozs1q.jpg" for 127.0.0.1 at 2021-08-18 10:44:08 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/4wvuq0i4ozs1q.jpg"):
+  
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:47:59 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 2.3ms | Allocations: 1453)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 8.9ms | Allocations: 5194)
+Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 6111)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:48:19 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 137)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 11.7ms | Allocations: 6359)
+Completed 200 OK in 32ms (Views: 12.7ms | ActiveRecord: 0.5ms | Allocations: 17878)
+
+
+Started POST "/photos" for 127.0.0.1 at 2021-08-18 10:48:43 +0700
+Processing by PhotosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "photo"=>{"title"=>"Anh 1", "mode"=>"0", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055b8556e5da8 @tempfile=#<Tempfile:/tmp/RackMultipart20210818-19726-y90g50.jpg>, @original_filename="4wvuq0i4ozs1q.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"4wvuq0i4ozs1q.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Đây là ảnh 1"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("title", "description", "image", "mode", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Anh 1"], ["description", "Đây là ảnh 1"], ["image", "4wvuq0i4ozs1q.jpg"], ["mode", 0], ["user_id", 1], ["created_at", "2021-08-18 03:48:43.248935"], ["updated_at", "2021-08-18 03:48:43.248935"]]
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 29ms (ActiveRecord: 6.4ms | Allocations: 9296)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:48:43 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 2.8ms | Allocations: 1006)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 9.1ms | Allocations: 4220)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 4715)
+
+
+Started GET "/images/4wvuq0i4ozs1q.jpg" for 127.0.0.1 at 2021-08-18 10:48:43 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/4wvuq0i4ozs1q.jpg"):
+  
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:49:41 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 2.4ms | Allocations: 1453)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 9.1ms | Allocations: 5250)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 6149)
+
+
+Started GET "/images/4wvuq0i4ozs1q.jpg" for 127.0.0.1 at 2021-08-18 10:49:41 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/4wvuq0i4ozs1q.jpg"):
+  
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:51:05 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 5.2ms | Allocations: 1455)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 12.1ms | Allocations: 5313)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.3ms | Allocations: 6234)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:51:32 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 3.1ms | Allocations: 1454)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 9.1ms | Allocations: 5302)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.5ms | Allocations: 6264)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:51:49 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 2.0ms | Allocations: 1454)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 7.4ms | Allocations: 5297)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 6258)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:52:01 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 4.2ms | Allocations: 1454)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 11.0ms | Allocations: 5297)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 6258)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:52:13 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 2.2ms | Allocations: 1454)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 7.5ms | Allocations: 5294)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 6255)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:52:45 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 2.3ms | Allocations: 1454)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 7.3ms | Allocations: 5304)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 6266)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:53:25 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 3.0ms | Allocations: 1454)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 9.3ms | Allocations: 5280)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.2ms | Allocations: 6241)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:54:05 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 2.6ms | Allocations: 1454)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 9.0ms | Allocations: 5281)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 6242)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:54:42 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 4.2ms | Allocations: 1454)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 10.6ms | Allocations: 5294)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.1ms | Allocations: 6255)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:54:46 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 7.1ms | Allocations: 999)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 20.3ms | Allocations: 4085)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.6ms | Allocations: 4593)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:54:58 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 7.3ms | Allocations: 5098)
+Completed 200 OK in 16ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 7505)
+
+
+Started POST "/photos" for 127.0.0.1 at 2021-08-18 10:55:26 +0700
+Processing by PhotosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "photo"=>{"title"=>"Anh 2", "mode"=>"0", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055b8551306d8 @tempfile=#<Tempfile:/tmp/RackMultipart20210818-19726-gvzl7a.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Đây là anh 2"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("title", "description", "image", "mode", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Anh 2"], ["description", "Đây là anh 2"], ["image", "index.jpeg"], ["mode", 0], ["user_id", 1], ["created_at", "2021-08-18 03:55:26.897901"], ["updated_at", "2021-08-18 03:55:26.897901"]]
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 21ms (ActiveRecord: 4.3ms | Allocations: 7060)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:55:26 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 1.7ms | Allocations: 997)
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 7.5ms | Allocations: 4199)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 4652)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2021-08-18 10:55:36 +0700
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  Rendering photos/new.html.erb
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered photos/new.html.erb (Duration: 4.9ms | Allocations: 4554)
+Completed 200 OK in 14ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 6791)
+
+
+Started POST "/photos" for 127.0.0.1 at 2021-08-18 10:55:56 +0700
+Processing by PhotosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "photo"=>{"title"=>"Anh 3", "mode"=>"0", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055b85628cfa8 @tempfile=#<Tempfile:/tmp/RackMultipart20210818-19726-unosbl.jpg>, @original_filename="Nên-tập-trung-vào-ánh-mắt-mẫu.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"N\xC3\xAAn-t\xE1\xBA\xADp-trung-v\xC3\xA0o-\xC3\xA1nh-m\xE1\xBA\xAFt-m\xE1\xBA\xABu.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Đây là ảnh 3\r\n"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/photos_controller.rb:26:in `get_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("title", "description", "image", "mode", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Anh 3"], ["description", "Đây là ảnh 3\r\n"], ["image", "Nên-tập-trung-vào-ánh-mắt-mẫu.jpg"], ["mode", 0], ["user_id", 1], ["created_at", "2021-08-18 03:55:56.833143"], ["updated_at", "2021-08-18 03:55:56.833143"]]
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/photos_controller.rb:18:in `create'
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 18ms (ActiveRecord: 6.2ms | Allocations: 6818)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:55:56 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 3.6ms | Allocations: 997)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 8.0ms | Allocations: 4468)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 4922)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:57:31 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 2.7ms | Allocations: 1454)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 10.2ms | Allocations: 5798)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 6706)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 10:59:37 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 2.7ms | Allocations: 997)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 9.1ms | Allocations: 4534)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 5043)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 11:02:13 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 2.8ms | Allocations: 997)
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 10.8ms | Allocations: 4538)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.5ms | Allocations: 4992)
+
+
+Started GET "/albums" for 127.0.0.1 at 2021-08-18 11:02:14 +0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb
+  Rendered albums/index.html.erb (Duration: 0.4ms | Allocations: 132)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 898)
+
+
+Started GET "/photos" for 127.0.0.1 at 2021-08-18 11:02:16 +0700
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:13
+  Rendered shared/_menu.html.erb (Duration: 4.4ms | Allocations: 1133)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."mode" = ?[0m  [["mode", 0]]
+  ↳ app/views/photos/index.html.erb:26
+  Rendered photos/index.html.erb (Duration: 10.0ms | Allocations: 4817)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 5348)
+
+

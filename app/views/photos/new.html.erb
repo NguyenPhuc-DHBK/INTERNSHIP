@@ -29,27 +29,34 @@
             <hr>
             <div class="body d-flex justify-content-around">
                 <div class="body-content">
-                    <form action="/photos" method="post" id="formAdd" accept-charset="UTF-8">
-                        <div class="title">Title</div>
-                        <input type="text" class="form-control" id="title" name="photo[title]">
-                        <div class="title">Sharing node</div>
-                        <select class="form-control" id="mode" name="photo[mode]">
-                            <option value="0">Public</option>
-                            <option value="1">Private</option>
-                          </select>
-                          <div class="body-img" style="margin-top: 31px;">
-                            <input id='fileid' type='file' name='photo[filename]' hidden/>
+             
+
+                    <%= form_for @photo do |f| %>
+                        <div>
+                            <%= f.label :title, "Title", class: "title" %>
+                            <%= f.text_field :title, class: "form-control" %>
+                        </div>
+                        
+                        <div style="margin-top: 31px;">
+                            <%= f.label :mode, "Sharing mode", class: "title" %><br>
+                            <%= f.select :mode, [["Public", "0"], ["Private", "1"]], class: "form-control" %>
+                        </div>
+                        
+                        <div class="body-img" style="margin-top: 31px;">
+                            <%= f.file_field :image %>
                             <i class="fa fa-plus"></i>
                             <img src="" alt="">
                         </div>
+
                         <div class="body-content">
-                            <div class="title" id="description">Description</div>
-                            <textarea class="form-control" cols="40" id="decription" name="photo[description]"></textarea>
+                            <%= f.label :description, "Description" %>
+                            <%= f.text_area :description, class: "form-control" %>
                         </div>
+
                         <div class="body-button d-flex" style="margin-top: 51px;">
-                            <button type="submit" class="save btn" style="margin-right: 22px;">Save</button>
+                            <%= f.submit "Save", class: "btn"%>
                         </div>
-                    </form>
+                    <% end %>
 
             </div>
          </div>
