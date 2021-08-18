@@ -1,0 +1,128 @@
+body {
+    font-family: "Roboto";
+}
+
+div#content {
+    background-color: #f8f8f8;
+    
+}
+div.middle {
+    background-color: white;
+    margin-top: 20px;
+}
+
+div.menu-left {
+    margin-top: 80px;
+    margin-left: 67px;
+}
+
+div.menu-left a {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: #828282
+}
+
+div.top-content {
+    height: 238px;
+    line-height: 238px;
+    padding-left: 43px;
+}
+div.info-user {
+    margin-top: 41px;
+    margin-left: 45px;
+}
+div.follow {
+    width: 80px;
+    height: 24px;
+    text-align: center;
+    background: linear-gradient(238.39deg, #eb6057 27.49%, #f2994a 69.05%);
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: white;
+}
+
+div.name-user {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 53px;
+    margin-top: 13px;
+}
+div.info-detail {
+    margin-top: 0px;
+}
+div.info-detail, div.info-detail a { 
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    color: #828282;
+}
+
+div.info-detail a span{
+    font-size: 15px;
+}
+
+div.info-detail a:focus {
+    color: #3c5999;
+}
+
+div.picture a img {
+    border-radius: 6px;
+}
+div.title {
+    width: 185px;
+    height: 15px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #4f4f4f;
+    margin-top: 210px;
+}
+div.d-flex {
+    margin-bottom: 29px;
+}
+div.picture-info {
+    margin: 20px 20px 10px 20px;
+}
+div.picture {
+    position: relative;
+}
+div.number-photo {
+    width: 89px;
+    height: 89px;
+    border-radius: 50%;
+    background-color: rgba(51, 51, 51, 0.4);
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 26%;
+    padding: 15px;
+    margin-top: 48px;
+    z-index: 4;
+}
+div.picture img {
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+}
+img.pic-1 {
+    position: absolute;
+    z-index: 3;
+}
+img.pic-2 {
+    position: absolute;
+    z-index: 2;
+    transform: rotate(4deg);
+}
+img.pic-3 {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(10deg);
+}

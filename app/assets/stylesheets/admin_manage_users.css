@@ -1,0 +1,43 @@
+body {
+    font-family: "Roboto";
+}
+
+div#content {
+    background-color: #f8f8f8;
+    
+}
+div.middle {
+    background-color: white;
+    margin-top: 20px;
+    height: 895px;
+}
+
+div.menu-left {
+    margin-top: 80px;
+    margin-left: 67px;
+}
+
+div.menu-left a {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: #828282
+}
+div.menu-left a:focus {
+    color: #3c5999;
+}
+table.table tr td button {
+    color: white;
+    font-size: 15px;
+    line-height: 18px;
+}
+button.btn-edit {
+    background-color: #219653;
+}
+button.btn-delete {
+    background-color: #eb5757;
+}
+th, td {
+    font-size: 15px;
+    line-height: 18px;
+}

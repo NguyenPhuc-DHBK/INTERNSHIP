@@ -1,0 +1,74 @@
+{
+  "application.js": "/packs/js/application-e421b4aa3f716bebdab1.js",
+  "application.js.map": "/packs/js/application-e421b4aa3f716bebdab1.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-e421b4aa3f716bebdab1.js"
+      ],
+      "js.map": [
+        "/packs/js/application-e421b4aa3f716bebdab1.js.map"
+      ]
+    },
+    "jquery": {
+      "js": [
+        "/packs/js/jquery-02c73c8c49ca1d5bd55d.js"
+      ],
+      "js.map": [
+        "/packs/js/jquery-02c73c8c49ca1d5bd55d.js.map"
+      ]
+    },
+    "login": {
+      "js": [
+        "/packs/js/login-d3fa9699b915b3a3be4f.js"
+      ],
+      "js.map": [
+        "/packs/js/login-d3fa9699b915b3a3be4f.js.map"
+      ]
+    },
+    "new_album": {
+      "js": [
+        "/packs/js/new_album-c58baf3f939479f413aa.js"
+      ],
+      "js.map": [
+        "/packs/js/new_album-c58baf3f939479f413aa.js.map"
+      ]
+    },
+    "new_photo": {
+      "js": [
+        "/packs/js/new_photo-9d5fcdc6e3467712cfda.js"
+      ],
+      "js.map": [
+        "/packs/js/new_photo-9d5fcdc6e3467712cfda.js.map"
+      ]
+    },
+    "photo": {
+      "js": [
+        "/packs/js/photo-bf0a0720f307fe9b7bf3.js"
+      ],
+      "js.map": [
+        "/packs/js/photo-bf0a0720f307fe9b7bf3.js.map"
+      ]
+    },
+    "signup": {
+      "js": [
+        "/packs/js/signup-0c894dc2171a06d1125e.js"
+      ],
+      "js.map": [
+        "/packs/js/signup-0c894dc2171a06d1125e.js.map"
+      ]
+    }
+  },
+  "jquery.js": "/packs/js/jquery-02c73c8c49ca1d5bd55d.js",
+  "jquery.js.map": "/packs/js/jquery-02c73c8c49ca1d5bd55d.js.map",
+  "login.js": "/packs/js/login-d3fa9699b915b3a3be4f.js",
+  "login.js.map": "/packs/js/login-d3fa9699b915b3a3be4f.js.map",
+  "new_album.js": "/packs/js/new_album-c58baf3f939479f413aa.js",
+  "new_album.js.map": "/packs/js/new_album-c58baf3f939479f413aa.js.map",
+  "new_photo.js": "/packs/js/new_photo-9d5fcdc6e3467712cfda.js",
+  "new_photo.js.map": "/packs/js/new_photo-9d5fcdc6e3467712cfda.js.map",
+  "photo.js": "/packs/js/photo-bf0a0720f307fe9b7bf3.js",
+  "photo.js.map": "/packs/js/photo-bf0a0720f307fe9b7bf3.js.map",
+  "signup.js": "/packs/js/signup-0c894dc2171a06d1125e.js",
+  "signup.js.map": "/packs/js/signup-0c894dc2171a06d1125e.js.map"
+}

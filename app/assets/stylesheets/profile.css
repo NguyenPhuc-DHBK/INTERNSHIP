@@ -1,0 +1,134 @@
+body {
+    font-family: "Roboto";
+}
+
+div#content {
+    background-color: #f8f8f8;
+    
+}
+div.middle {
+    background-color: white;
+    margin-top: 20px;
+}
+
+div.menu-left {
+    margin-top: 80px;
+    margin-left: 67px;
+}
+
+div.menu-left a {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: #828282
+}
+
+div.top-content {
+    height: 238px;
+    line-height: 238px;
+    padding-left: 43px;
+    margin-bottom: 40px;
+    position: relative;
+}
+div.top-content button {
+    width: 130px;
+    height: 31px;
+    background-color: #219653;
+    color: white;
+    text-align: center;
+    border-radius: 29px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    position: absolute;
+    top: 207px;
+    left: 85%;
+}
+div.info-user {
+    margin-top: 41px;
+    margin-left: 45px;
+}
+div.follow {
+    width: 80px;
+    height: 24px;
+    text-align: center;
+    background: linear-gradient(238.39deg, #eb6057 27.49%, #f2994a 69.05%);
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: white;
+}
+
+div.name-user {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 53px;
+    margin-top: 13px;
+}
+div.picture-info {
+    margin: 20px;
+}
+div.picture {
+    position: relative;
+}
+div.key {
+    position: absolute;
+    top: 3.7%;
+    left: 87%;
+}
+div.key button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+div.edit {
+    position: absolute;
+    top: 85%;
+    left: 75%;
+}
+div.edit button {
+    width: 37px;
+    height: 18px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    font-size: 10px;
+    line-height: 18px;
+    color: white;
+}
+div.info-detail {
+    margin-top: 0px;
+}
+div.info-detail, div.info-detail a { 
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    color: #828282;
+}
+
+div.info-detail a span{
+    font-size: 15px;
+}
+
+div.info-detail a:focus {
+    color: #3c5999;
+}
+
+div.picture a img {
+    border-radius: 6px;
+}
+div.title {
+    width: 185px;
+    height: 15px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #4f4f4f;
+    margin-top: 8px;
+}
+div.d-flex {
+    margin-bottom: 29px;
+}

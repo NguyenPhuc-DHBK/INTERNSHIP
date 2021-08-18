@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <%= stylesheet_link_tag 'new_photo', 'menu' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <%= render 'shared/menu' %>
+  <div id="content" class="container-fluid">
+     <div class="row">
+         <div class="left col-2">
+             <div class="menu-left d-flex flex-column justify-content-center">
+                 <a href="#">Feeds</a>
+                 <a href="#">Discover</a>
+             </div>
+         </div>
+         <div class="middle col-8">
+            <div class="head d-flex justify-content-between">
+                <div class="title">New Photo</div>
+                <div class="button">
+                    <a href="#" class="btn">Back</a>
+                </div>
+            </div>
+            <hr>
+            <div class="body d-flex justify-content-around">
+                <div class="body-content">
+                    <form action="/photos" method="post" id="formAdd" accept-charset="UTF-8">
+                        <div class="title">Title</div>
+                        <input type="text" class="form-control" id="title" name="photo[title]">
+                        <div class="title">Sharing node</div>
+                        <select class="form-control" id="mode" name="photo[mode]">
+                            <option value="0">Public</option>
+                            <option value="1">Private</option>
+                          </select>
+                          <div class="body-img" style="margin-top: 31px;">
+                            <input id='fileid' type='file' name='photo[filename]' hidden/>
+                            <i class="fa fa-plus"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="body-content">
+                            <div class="title" id="description">Description</div>
+                            <textarea class="form-control" cols="40" id="decription" name="photo[description]"></textarea>
+                        </div>
+                        <div class="body-button d-flex" style="margin-top: 51px;">
+                            <button type="submit" class="save btn" style="margin-right: 22px;">Save</button>
+                        </div>
+                    </form>
+
+            </div>
+         </div>
+         <div class="right col-2"></div>
+     </div>
+  </div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script> 
+    <%= javascript_pack_tag 'new_photo' %>
+</html>
