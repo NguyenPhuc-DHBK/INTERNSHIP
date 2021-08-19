@@ -75,6 +75,36 @@ button.save {
     font-size: 15px;
     line-height: 18px;
 }
+input#photo_image {
+    display: none;
+}
+div.body-img {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    background-color: #f8f8f8;
+}
+div.body-img i {
+    position: absolute;
+    top: 43%;
+    right: 44%;
+    font-family: FontAwesome;
+    font-size: 20px;
+    line-height: 23px;
+    color: #4f4f4f;
+ }
+ label.title {
+     font-weight: bold;
+ }
+ input[type="submit"] {
+    background-color: #219653;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    color: white;
+    font-size: 15px;
+    line-height: 18px;
+}
+
 button.delete {
     background-color: #eb5757;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);

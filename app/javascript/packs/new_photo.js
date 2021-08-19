@@ -38,4 +38,10 @@ $(document).ready(function(event) {
         }
     }
 });
+    $('div.body-button').click(function() {
+        var r = confirm("Do you want to delete this photo?")
+        if(r == true) {
+            $('input.delete').click();
+        }
+    });
 });

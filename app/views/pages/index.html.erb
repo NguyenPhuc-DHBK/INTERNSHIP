@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <%= stylesheet_link_tag 'profile', 'menu' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+  <%= render 'shared/menu' %>
+  <div id="content" class="container-fluid">
+     <div class="row">
+         <div class="left col-2">
+             <div class="menu-left d-flex flex-column justify-content-center">
+                 <a href="#">Feeds</a>
+                 <a href="#">Discover</a>
+             </div>
+         </div>
+         <div class="middle col-8">
+            <div class="top-content d-flex">
+                <div class="avartar">
+                    <a href="#"><img class="rounded-circle" src="images/4wvuq0i4ozs1q.jpg" alt="" width="171px" height="171px"></a>
+                </div>
+                <div class="info-user">
+                    <div class="follow">following</div>
+                    <div class="name-user">Hansford Nguyen</div>
+                    <div class="info-detail">
+                        <a href="#"><%= current_user.photos.size %> <span>PHOTOS</span></a> | 
+                        <a href="#"><%= current_user.albums.size %> <span>ALBUMS</span></a> | 
+                        <a href="#">22 <span>FOLLOWINGS</span></a> | 
+                        <a href="#">13 <span>FOLLOWERS</span></a> | 
+                    </div>
+                </div>
+                <button type="button" class="btn" onclick="window.location.href='<%= new_photo_path %>'">Add Photo</button>
+            </div>
+             <% if flash[:success] %>
+            <div class="alert alert-success">
+                <%= flash[:success] %>
+            </div>
+            <% end %>
+            <div class="bottom-content">
+                <div class="d-flex d-flex flex-wrap">
+                    <% @photos.each do |photo| %>
+                    <div class="picture-info">
+                        <div class="picture">
+                            <div class="key">
+                                <% if photo.private_mode? %>
+                                <button class="d-flex justify-content-center"><i class="fa fa-lock"></i></button>
+                                <% end %>
+                            </div>
+                            <div class="edit"><button class="btn d-flex justify-content-center" onclick="window.location.href='<%= edit_photo_path(photo) %>' " >EDIT</button></div>
+                            <a class="img-fluid" href="#"><img src="<%= photo.image.url %>" alt="" width="185px" height="185px"></a>
+                        </div>
+                        <div class="title"><%= photo.title %></div>
+                    </div>
+                    <% end %>
+                </div>
+
+              
+                
+            </div>
+         </div>
+         <div class="right col-2"></div>
+     </div>
+  </div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+</html>

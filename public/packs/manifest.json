@@ -36,10 +36,10 @@
     },
     "new_photo": {
       "js": [
-        "/packs/js/new_photo-b69ac62ced984967f610.js"
+        "/packs/js/new_photo-d07178c576ce413f8143.js"
       ],
       "js.map": [
-        "/packs/js/new_photo-b69ac62ced984967f610.js.map"
+        "/packs/js/new_photo-d07178c576ce413f8143.js.map"
       ]
     },
     "photo": {
@@ -65,8 +65,8 @@
   "login.js.map": "/packs/js/login-d3fa9699b915b3a3be4f.js.map",
   "new_album.js": "/packs/js/new_album-2a3461fbe22bac22aa76.js",
   "new_album.js.map": "/packs/js/new_album-2a3461fbe22bac22aa76.js.map",
-  "new_photo.js": "/packs/js/new_photo-b69ac62ced984967f610.js",
-  "new_photo.js.map": "/packs/js/new_photo-b69ac62ced984967f610.js.map",
+  "new_photo.js": "/packs/js/new_photo-d07178c576ce413f8143.js",
+  "new_photo.js.map": "/packs/js/new_photo-d07178c576ce413f8143.js.map",
   "photo.js": "/packs/js/photo-bf0a0720f307fe9b7bf3.js",
   "photo.js.map": "/packs/js/photo-bf0a0720f307fe9b7bf3.js.map",
   "signup.js": "/packs/js/signup-0c894dc2171a06d1125e.js",

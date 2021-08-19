@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <%= stylesheet_link_tag 'new_photo', 'menu' %>
+    <%= stylesheet_link_tag 'edit_photo', 'menu' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -21,22 +21,22 @@
          </div>
          <div class="middle col-8">
             <div class="head d-flex justify-content-between">
-                <div class="title">New Photo</div>
+                <div class="title">Edit Photo</div>
                 <div class="button">
                     <a href="#" class="btn">Back</a>
                 </div>
             </div>
             <hr>
-             <% if flash[:error] %>
+            <% if flash[:error] %>
              <div class="alert alert-danger">
                 <%= flash[:error] %>
             </div>
             <% end %>
             <div class="body d-flex justify-content-around">
                 <div class="body-content">
-             
+                   
 
-                    <%= form_for @photo do |f| %>
+                     <%= form_for @photo do |f| %>
                         <div>
                             <%= f.label :title, "Title", class: "title" %>
                             <%= f.text_field :title, class: "form-control" %>
@@ -50,11 +50,11 @@
                         <div class="body-img" style="margin-top: 31px;">
                             <%= f.file_field :image %>
                             <i class="fa fa-plus"></i>
-                            <img src="" alt="">
+                            <img src="<%= @photo.image.url %>" alt="" width="180px" height="180px">
                         </div>
 
                         <div class="body-content">
-                            <%= f.label :description, "Description" %>
+                            <%= f.label :description, "Description", class: "title" %>
                             <%= f.text_area :description, class: "form-control" %>
                         </div>
 
@@ -62,7 +62,14 @@
                             <%= f.submit "Save", class: "btn"%>
                         </div>
                     <% end %>
+                    <form>  
+                        
+                    </form>
+                     <div class="body-button d-flex" style="margin-top: 51px;">
+                        <%= button_to "Delete", @photo, method: :delete, class: "delete" %>
+                    </div>
 
+                </div>
             </div>
          </div>
          <div class="right col-2"></div>
